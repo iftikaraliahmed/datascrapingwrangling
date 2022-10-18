@@ -1,0 +1,19 @@
+for oyo in parents:
+    try:
+        hotel_name = oyo.find_element_by_css_selector('span.newHotelCard__hotelName').text
+        location = oyo.find_element_by_css_selector('span.newHotelCard__hotelAddress').text
+        prices = oyo.find_element_by_css_selector('span.newHotelCard__revisedPricing').text
+        discount = oyo.find_element_by_css_selector('div.newHotelCard__discount').text
+        rating = oyo.find_element_by_css_selector('span.hotelRating__value').text
+        count = oyo.find_element_by_css_selector('div.hotelRating__count').text
+        img_url = oyo.find_element_by_css_selector('img.carousal__image').get_attribute('src')
+    except:
+        hotel_name = None
+        location = None
+        prices = None
+        discount = None
+        rating = None
+        count = None
+        img_url = None
+        
+    print(img_url)
